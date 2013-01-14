@@ -1,0 +1,11 @@
+<section class="input">
+  <form method="post" action="/slug">
+    <input type="text" name="title" placeholder="Paste the title here" />
+    <input type="checkbox" name="date" />
+    <label for="date">Need a date?</label>
+    <input type="submit" value="Go ahead, make a slug." class="hover" />
+  </form>
+</section>
+<% unless @slug.nil? %>
+  <%= erb :slug, :layout => false %>
+<% end %>

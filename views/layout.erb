@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= "#{APP_NAME}" %> | <%= "#{APP_DESC}" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/global.min.css" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Cousine:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+      <meta name="description" content="<%= "#{APP_NAME}" %> | <%= "#{APP_DESC}" %>">
+      <meta name="author" content="Ellen Gummesson">
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="app-header">
+      <h1 class="brand">
+        <a href="/" title="<%= "#{APP_NAME}" %> | <%= "#{APP_DESC}" %>" alt="<%= "#{APP_NAME}" %> | <%= "#{APP_DESC}" %>"><%= "#{APP_NAME}" %></a>
+      </h1>
+      <p>Are you too lazy to manually type out a slug for your newly written blog post? Then you're in just the right place!</p> 
+      </header>
+      <div class="app-content">
+        <%= yield %>
+      </div>
+      <footer class="app-footer">
+      <p>Deployed with and hosted on <a href="http://www.heroku.com/" title="Heroku" alt="Heroku">Heroku</a>. Source on <a href="https://github.com/gummesson/slugize" title="Slugize on GitHub" alt="Slugize on GitHub">GitHub</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

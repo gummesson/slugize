@@ -1,7 +1,8 @@
 helpers do
-  # Transform the title into a slug
+  # Transforms the title into a slug by removing ', ! and ?
+  # and replacing whitespace with -
   def slugize(title)
-   "#{title}".gsub(/[^[:alnum:]]+/, "-").downcase
+    "#{title}".gsub(/(\'|\!|\?)/,"").gsub(/\s/,"-").downcase
   end
 
   # Parse date

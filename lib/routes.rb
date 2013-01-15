@@ -20,11 +20,9 @@ end
 # Not Found
 not_found do
   message("Whoops! The requested route couldn't be found. Sorry!")
-  erb :message
 end
 
 # Error
 error do
   message("Whoops! An error occurred. Booooo!")
-  erb :message
 end

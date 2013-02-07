@@ -2,11 +2,14 @@ helpers do
   # Parses the title into a slug
   #
   #  title = The given title. Transforms the title into a slug by removing 
-  #          ', !, ?, :, replacing the whitespace with - and changing it to
+  #          various characters, replacing the whitespace and changing it to
   #          downcase.
   #
   def slugize(title)
-    "#{title}".gsub(/(\'|\!|\?|\:|\s\z)/,"").gsub(/\s/,"-").downcase
+    remove_characters  = /(\,|\.|\'|\!|\?|\:|\s\z|\#\s)/
+    replace_characters = /(\s|\/)/
+
+    "#{title}".downcase.gsub(remove_characters,"").gsub(replace_characters,"-")
   end
 
   # Parses the date
